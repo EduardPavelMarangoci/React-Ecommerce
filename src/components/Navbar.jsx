@@ -105,10 +105,10 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
   return (
     <>
       <header>
-        <nav className="navbar navbar-expand-lg fixed-top">
+        <nav className="navbar navbar-expand-lg fixed-top px-3">
           <div className="container-fluid">
-            <a className="navbar-brand" href="https://telusko.com/">
-              Telusko
+            <a className="navbar-brand" href="/">
+              Products Managements
             </a>
             <button
               className="navbar-toggler"
@@ -164,24 +164,7 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
 
                 <li className="nav-item"></li>
               </ul>
-              <button className="theme-btn" onClick={() => toggleTheme()}>
-                {theme === "dark-theme" ? (
-                  <i className="bi bi-moon-fill"></i>
-                ) : (
-                  <i className="bi bi-sun-fill"></i>
-                )}
-              </button>
-              <div className="d-flex align-items-center cart">
-                <a href="/cart" className="nav-link text-dark">
-                  <i
-                    className="bi bi-cart me-2"
-                    style={{ display: "flex", alignItems: "center" }}
-                  >
-                    Cart
-                  </i>
-                </a>
-                {/* <form className="d-flex" role="search" onSubmit={handleSearch} id="searchForm"> */}
-                <input
+              <input
                   className="form-control me-2"
                   type="search"
                   placeholder="Search"
@@ -210,15 +193,14 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
                     )}
                   </ul>
                 )}
-                {/* <button
-                  className="btn btn-outline-success"
-                  onClick={handleSearch}
-                >
-                  Search Products
-                </button> */}
-                {/* </form> */}
-                <div />
-              </div>
+              <button className="theme-btn" onClick={() => toggleTheme()}>
+                {theme === "dark-theme" ? (
+                  <i className="bi bi-moon-fill"></i>
+                ) : (
+                  <i className="bi bi-sun-fill"></i>
+                )}
+              </button>
+              
             </div>
           </div>
         </nav>

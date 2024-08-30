@@ -25,10 +25,10 @@
 .dark-theme{
   --root_background: white;
   --body_background: #1f1f1f;
-  --navbar_background: black;
+  --navbar_background: #323131;
   --navbar_text : white;
     /* --body_color : white; */
-    --body_color : black;
+    --body_color : #181818;
     --link_color : rgb(255, 255, 255);
     --link_hover_color : rgb(137, 137, 137);
     --link_visited_color : purple;
@@ -51,7 +51,15 @@
   background-color: var(--root_background) !important;
 }  
 
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* <.............................................NAVBAR DROPDOWN......................................> */
+
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
@@ -78,13 +86,17 @@
   color: #007bff;
 } */
 
+.form-control.me-2 {
+  width: 196px;
+}
+
 .list-group {
   position: absolute;
   top: 100%;
-  left: 0;
-  width: calc(100% - 1rem); 
+  right: 6rem;
+  width: 196px; 
   background-color: var(--body_color);
-  border: 1px solid #ced4da;
+  border: none !important;
   border-radius: 0.25rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -93,13 +105,13 @@
 .list-group-item {
   padding: 0.5rem 1rem;
   cursor: pointer;
-  background-color: var(--search_result-bg) !important;
+  border: 1px solid #23221e !important;
+  background-color: var(--body-color) !important;
 }
 
 .list-group-item:hover {
-  background-color: #f8f9fa;
+  background-color: #3e3e3e !important;
 }
-
 
 .no-results-message {
   margin-top: 0.5rem;
@@ -152,10 +164,12 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 90%;
   background-color: var(--navbar_background);
   /* color: var(--navbar_text); */
-  padding: 10px 0;
+  padding: 10px 0px;
+  margin: 30px auto;
+  border-radius: 10px;
   
   /* z-index: 1000;  */
 }
@@ -203,7 +217,7 @@ width: 100%;
 height: 100%;
 display: grid;
 place-items: flex-start;
-padding: 3rem;
+padding-top: 4rem !important;
 grid-template-columns: 0.5fr 0.5fr 0.5fr;
 grid-template-rows: 1fr 1fr 1fr;
 /* grid-column-gap: 2rem;
@@ -260,7 +274,7 @@ padding-top: 100px;
 
  
 .containers {
-  width: 100%;
+  width: 90%;
   height: 150vh;
   margin: 0 auto;
   padding: 15px;
@@ -278,6 +292,7 @@ padding-top: 100px;
   max-height: 30rem;
   padding-top: 6rem;
   margin: 20px;
+  border-radius: 10px;
 }
 .left-column {
   width: 40%;
