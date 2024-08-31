@@ -81,7 +81,7 @@ const Home = ({ selectedCategory }) => {
           </h2>
         ) : (
           filteredProducts.map((product) => {
-            const { id, brand, name, price, productAvailable, imageUrl } =
+            const { id, brand, name, price, productAvailable, stockQuantity, imageUrl } =
               product;
             const cardStyle = {
               width: "18rem",
@@ -153,6 +153,14 @@ const Home = ({ selectedCategory }) => {
                         style={{ fontWeight: "600", fontSize: "1.1rem",marginBottom:'5px' }}
                       >
                         {"€ " + price}
+                      </h5>
+                    </div>
+                    <div>
+                      <h5
+                        // className="card-text"
+                        style={{ color: stockQuantity > 0 ? "#c9f5b6" : "#f55f67", fontWeight: "400", fontSize: "0.9rem", marginTop: "5px"}}
+                      >
+                        {"Stock available: " + stockQuantity}
                       </h5>
                     </div>
                     {/* <button

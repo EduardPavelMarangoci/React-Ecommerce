@@ -197,7 +197,7 @@ a {
  
 }
 .card h5,h3,i{
-  color: var(--para-clr) !important;
+  color: var(--para-clr);
 }
 .dropdown-item{
   color: var(--para-clr) !important;
@@ -1192,5 +1192,9 @@ font-size: 14px;
 .hr-line {
   width: 100%;
   height: 1px;
-  background: var(--hr_line_card)
+  color: white !important;
+}
+
+h6 {
+  color: white;
 }
